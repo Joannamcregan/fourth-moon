@@ -1,0 +1,74 @@
+body{
+    max-height: 100vh;
+    background: #f3efec;
+    /* color: #2e4a0c; */
+    color: #2b4210;
+}
+#heading{
+    margin: 150px auto 0px auto;
+    width: fit-content;
+    padding: 20px;
+}
+h1{
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+}
+h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+a{
+    color: #254000;
+}
+#about{
+    padding: 0px 20px;
+    margin: 0px auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+#email{
+    margin: 10px auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+#coming-soon{
+    margin: 30px auto;
+    text-align: center;
+    font-size: 26px;
+    font-family: serif;
+}
+img{
+    height: auto;
+    width: 100px;
+    position: absolute;
+    top: 50px;
+}
+.rising{
+    animation: rise 3s forwards;
+}
+@keyframes rise {
+    0% {
+        left: 30%;
+        opacity: 0.3;
+        scale: 0.75;
+    }
+    100% {
+        left: 45%;
+        opacity: 1;
+        scale: 1;
+    }
+}
+.hidden{
+    display: none;
+}
+.fadeIn{
+    animation: fade 2s forwards;
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
