@@ -50,6 +50,7 @@ a{
     width: 100%;
     text-align: center;
     font-size: 28px;
+    margin-top: 40px;
 }
 img{
     height: auto;
@@ -61,10 +62,57 @@ img{
     animation: riseSmall 3s forwards;
 }
 
-@media(min-height:601px) {
+@media screen and (max-width:540px) {
+    h1{
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width:414px) {
+    h1{
+        font-size: 34px;
+    }
+    #coming-soon{
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width:376px) {
+    h1{
+        font-size: 30px;
+    }
+    #coming-soon{
+        font-size: 24px;
+    }
+    #about{
+        font-size: 18px;
+    }
     #email{
-        text-align: left;
-        margin: 10px 20px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:338px) {
+    h1{
+        font-size: 28px;
+    }
+    #coming-soon{
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:322px) {
+    h1{
+        font-size: 26px;
+    }
+    #coming-soon{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width:601px) {
+    #coming-soon{
+        text-align: right;
     }
 }
 
