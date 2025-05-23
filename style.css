@@ -5,32 +5,43 @@
     font-style: normal;
 }
 body{
-    max-height: 100vh;
+    height: 98vh;
     background: #f3efec;
     /* color: #2e4a0c; */
     color: #2b4210;
     font-family: 'TheSeasons', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0px !important;
 }
 main{
-    height: fit-content;
-    margin: auto 0px;
+    position: relative;
     display: block;
-
+    margin: 0px;
 }
 .special-characters{
     font-family: Arial, Helvetica, sans-serif;
 }
 #content{
-    margin: 170px auto 0px auto;
     width: fit-content;
+    height: fit-content;
     padding: 20px 20px 10px 20px;
     font-family: 'TheSeasons', sans-serif;
     margin-bottom: 0px;
     text-align: center;
+    z-index: 2000;
+    display: block;
+}
+#logo{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 20px;
 }
 h1{
-    margin-bottom: 10px;
-    padding-bottom: 0px;
+    margin: 0px;
+    padding: 0px;
     font-size: 46px;
 }
 a{
@@ -51,15 +62,6 @@ a{
     text-align: center;
     font-size: 28px;
     margin-top: 40px;
-}
-img{
-    height: auto;
-    width: 100px;
-    position: absolute;
-    top: 70px;
-}
-.rising{
-    animation: riseSmall 3s forwards;
 }
 
 @media screen and (max-width:540px) {
@@ -110,26 +112,95 @@ img{
     }
 }
 
+.rising{
+    animation: riseSmall 3s forwards;
+}
+
 @media screen and (min-width:601px) {
+    #email{
+        text-align: right;
+    }
     #coming-soon{
         text-align: right;
+        margin-top: 60px;
+    }
+    .rising{
+        animation: riseMedium 3s forwards;
+    }
+    #content{
+        padding-right: 50px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    #logo{
+        top: 120px;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (min-width:905px) {
+    .rising{
+        animation: riseLarge 3s forwards;
+    }
+    #content{
+        padding-right: 100px;
+        display: flex;
+        flex-wrap: nowrap;
     }
 }
 
 @keyframes riseSmall {
     0% {
-        left: 30%;
+        /* left: 30%; */
+        padding-right: 200px;
         opacity: 0.3;
         scale: 0.75;
     }
     100% {
-        left: 45%;
+        /* left: 45%; */
+        padding-right: 0px;
         opacity: 1;
         scale: 1;
     }
 }
+
+@keyframes riseMedium {
+    0% {
+        /* left: 10%; */
+        padding-right: 50px;
+        padding-left: 0px;
+        opacity: 0.3;
+        scale: 0.75;
+    }
+    100% {
+        /* left: 25%; */
+        padding-right: 0px;
+        padding-left: 50px;
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes riseLarge {
+    0% {
+        /* left: 10%; */
+        padding-right: 100px;
+        padding-left: 0px;
+        opacity: 0.3;
+        scale: 0.75;
+    }
+    100% {
+        /* left: 25%; */
+        padding-right: 0px;
+        padding-left: 100px;
+        opacity: 1;
+        scale: 1;
+    }
+}
+
 .hidden{
-    display: none;
+    visibility: hidden;
 }
 .fadeIn{
     animation: fade 2s forwards;
